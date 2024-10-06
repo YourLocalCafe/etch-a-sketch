@@ -27,6 +27,7 @@ generateGrid(container, gridSquares);
 
 container.addEventListener('mouseover', (event) => {
     let target = event.target;
+    if(target.className === 'container') return;
     target.style.backgroundColor = getRandomColour();
     let colourOpacity = Number(target.style.opacity) + 0.1;
     target.style.opacity = Math.min(colourOpacity, 1);
@@ -36,7 +37,7 @@ const btn = document.querySelector(".reset");
 btn.addEventListener('click', (event) => {
     let dimension = 16;
     do {
-        dimension = prompt('Grid dimension (less than or equal to 100)', 16);
-    } while (dimension > 100);
+        dimension = prompt('Grid dimension (positive and less than or equal to 100)', 16);
+    } while (dimension > 100 || dimension < 1);
     generateGrid(container, dimension);
 });

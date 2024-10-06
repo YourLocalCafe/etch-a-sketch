@@ -10,23 +10,37 @@ box-sizing: inherit;
 
 body {
     display: flex;
-    flex-direction: column;
-    gap: 40px;
     height: 100vh;
     padding: 10px;
     font-family: 'Times New Roman', Times, serif;
     overflow: hidden;
+    background-color: bisque;
+    justify-content: space-between;
 }
 
 .container {
     display: flex;
     flex-wrap: wrap;
-    height: 800px;
-    width: 800px;
-    align-self: flex-end;
+    height: 804px;
+    width: 804px;
+    border: 2px solid black;
+    background-color: white;
+    align-self: center;
 }
 
 .reset {
     height: 40px;
     width: 60px;
+    border-radius: 10px;
+    align-self: center;
+}
+
+.sidebar {
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar h1 {
+    
 }
