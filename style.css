@@ -10,12 +10,23 @@ box-sizing: inherit;
 
 body {
     display: flex;
-    justify-content: flex-end;
+    flex-direction: column;
+    gap: 40px;
+    height: 100vh;
+    padding: 10px;
+    font-family: 'Times New Roman', Times, serif;
+    overflow: hidden;
 }
 
 .container {
     display: flex;
     flex-wrap: wrap;
-    height: 960px;
-    width: 960px;
+    height: 800px;
+    width: 800px;
+    align-self: flex-end;
+}
+
+.reset {
+    height: 40px;
+    width: 60px;
 }
